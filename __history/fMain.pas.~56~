@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl,
   FMX.Controls.Presentation, FMX.StdCtrls, framLogOn, fDM, framFirst_Page,
-  FramPrice, FramAnalitics, FramDiagram;
+  FramPrice, FramAnalitics, FramDiagram, UNetworkState, System.ImageList,
+  FMX.ImgList;
 
 type
   TfrmMain = class(TForm)
@@ -24,10 +25,15 @@ type
     FrameAnalitics1: TFrameAnalitics;
     StyleBook1: TStyleBook;
     FrameDiagram1: TFrameDiagram;
+    SpeedButton1: TSpeedButton;
+    ImageList1: TImageList;
     procedure FormCreate(Sender: TObject);
   private
+    FNetworkState: TNetworkState;
     procedure Login;
     procedure InitFrames;
+    procedure DoOnChange(Sender: TObject; Value: TNetworkStateValue);
+    procedure NetworkState;
   public
     procedure Event_From_Frame(Command: Integer; AMessage: String; AObject: TObject);
   end;
@@ -46,6 +52,18 @@ procedure TfrmMain.Login;
 begin
   tbLogOn.Visible:= false;
   TabControl1.ActiveTab:= tblFirst_Page;
+end;
+
+procedure TfrmMain.DoOnChange(Sender: TObject; Value: TNetworkStateValue);
+begin
+//  if Value = nsConnectedWifi then
+//    self.Memo1.Lines.Add('On change: Connected with WiFi')
+//  else if Value = nsConnectedMobileData then
+//    self.Memo1.Lines.Add('On change: Connected with mobile data')
+//  else if self.FNetworkState.CurrentValue = nsDisconnected then
+//    self.Memo1.Lines.Add('On change: Disconnected')
+//  else
+//    self.Memo1.Lines.Add('On change: Unknown');
 end;
 
 procedure TfrmMain.Event_From_Frame(Command: Integer; AMessage: String; AObject: TObject);
@@ -71,14 +89,35 @@ begin
 end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
-var
-  vNetworkState: TNetworkState;
 begin
-  vNetworkState:= Factory(self, nil): TNetworkState;
   TabControl1.TabPosition:= TTabPosition.None;
   InitFrames;
   tbLogOn.Visible:= true;
   TabControl1.ActiveTab:= tbLogOn;
+end;
+
+procedure TfrmMain.NetworkState;
+var
+  vNetValue: TNetworkStateValue;
+begin
+  self.FNetworkState := TNetworkState.Factory(self, DoOnChange);
+  vNetValue:= self.FNetworkState.CurrentValue;
+
+  if (vNetValue <> nsConnectedWifi) and (vNetValue <> nsConnectedMobileData) then
+  begin
+
+  end;
+
+{
+    if self.FNetworkState.CurrentValue = nsConnectedWifi then
+      self.Memo1.Lines.Add('On startup: Connected with WiFi')
+    else if self.FNetworkState.CurrentValue = nsConnectedMobileData then
+      self.Memo1.Lines.Add('On startup: Connected with mobile data')
+    else if self.FNetworkState.CurrentValue = nsDisconnected then
+      self.Memo1.Lines.Add('On startup: Disconnected')
+    else
+      self.Memo1.Lines.Add('On startup: Unknown');
+}
 end;
 
 procedure TfrmMain.InitFrames;
