@@ -1,0 +1,145 @@
+unit FramPrice;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.ListBox, FMX.Controls.Presentation, FMX.Objects, FMX.Edit, fDM, Data.DB,
+  MemDS, DBAccess, Uni, FMX.EditBox, FMX.NumberBox;
+
+type
+  TFramePrice = class(TFrame)
+    cbShop: TComboBox;
+    cbKind: TComboBox;
+    cbProduct: TComboBox;
+    cbConcurent: TComboBox;
+    cbConcurentSize: TComboBox;
+    cbGASize: TComboBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    btnSavePrice: TSpeedButton;
+    qrShop: TUniQuery;
+    qrKind: TUniQuery;
+    qrProduct: TUniQuery;
+    qrConcurent: TUniQuery;
+    qrConcurent_Size: TUniQuery;
+    qrGA_Size: TUniQuery;
+    edtGAPrice: TNumberBox;
+    edtConcurentPrice: TNumberBox;
+    spSavePrice: TUniStoredProc;
+    procedure btnSavePriceClick(Sender: TObject);
+  private
+    procedure Fill_Combos(ACombo: TComboBox; AQuery: TUniQuery);
+    procedure OpenAllQueries;
+    procedure SavePrice;
+    procedure SavePriceToDB(AShop_ID, AKind_ID, AProduct_ID, AConcurent_ID,
+      AConcurentSize_ID, AGASize_ID, AConcurentPrice, AGAPrice);
+  public
+    MFProc: TMFProc;
+    procedure InitFrame;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFramePrice.btnSavePriceClick(Sender: TObject);
+begin
+  SavePrice;
+  MFProc(c_Go_First_Page);
+end;
+
+procedure TFramePrice.InitFrame;
+begin
+  OpenAllQueries;
+
+  Fill_Combos(cbShop, qrShop);
+  Fill_Combos(cbKind, qrKind);
+  Fill_Combos(cbProduct, qrProduct);
+  Fill_Combos(cbConcurent, qrConcurent);
+  Fill_Combos(cbConcurentSize, qrConcurent_Size);
+  Fill_Combos(cbGASize, qrGA_Size);
+end;
+
+procedure TFramePrice.OpenAllQueries;
+var
+  I: Integer;
+  vQ: TUniQuery;
+begin
+  for I:= 0 to self.ComponentCount - 1 do
+    if self.Components[I] is TUniQuery then
+    begin
+      vQ:= TUniQuery(self.Components[I]);
+      if not vQ.Active then
+        vQ.Open;
+    end;
+end;
+
+procedure TFramePrice.Fill_Combos(ACombo: TComboBox; AQuery: TUniQuery);
+var
+  Item: TListBoxItem;
+begin
+  ACombo.Clear;
+  AQuery.First;
+
+  ACombo.ListBox.BeginUpdate;
+  while not AQuery.eof do
+  begin
+    Item:= TListBoxItem.Create(ACombo);
+    Item.Height:= 40;
+
+    Item.ItemData.Text:= AQuery.FieldByName('Item_Name').AsString;
+    Item.Tag:= AQuery.FieldByName('ID_Item').AsInteger;
+    ACombo.AddObject(Item);
+
+    AQuery.Next;
+  end;
+  AQuery.First;
+  ACombo.ItemIndex:= 0;
+  ACombo.ListBox.EndUpdate;
+end;
+
+procedure TFramePrice.SavePrice;
+var
+  vShop, vKind, vProduct, vConcurent, vConcurentSize, vGASize: TListBoxItem;
+  vConcurentPrice, vGAPrice: Single;
+begin
+  vShop:= cbShop.ListItems[cbShop.ItemIndex];
+  vKind:= cbKind.ListItems[cbKind.ItemIndex];
+  vProduct:= cbProduct.ListItems[cbProduct.ItemIndex];
+  vConcurent:= cbConcurent.ListItems[cbConcurent.ItemIndex];
+  vConcurentSize:= cbConcurentSize.ListItems[cbConcurentSize.ItemIndex];
+  vGASize:= cbGASize.ListItems[cbGASize.ItemIndex];
+
+  vConcurentPrice:= edtConcurentPrice.Value;
+  vGAPrice:= edtGAPrice.Value;
+
+  SavePriceToDB(vShop.Tag, vKind.Tag, vProduct.Tag, vConcurent.Tag, vConcurentSize.Tag, vGASize.Tag, vConcurentPrice, vGAPrice);
+end;
+
+procedure TFramePrice.SavePriceToDB(AShop_ID, AKind_ID, AProduct_ID, AConcurent_ID, AConcurentSize_ID, AGASize_ID, AConcurentPrice, AGAPrice);
+begin
+  spSavePrice.Prepare;
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.ParamByName('').AsInteger:=
+  spSavePrice.Execute;
+end;
+
+end.

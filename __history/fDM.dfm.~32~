@@ -1,0 +1,139 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 500
+  Width = 548
+  object UniConnection1: TUniConnection
+    ProviderName = 'Oracle'
+    SpecificOptions.Strings = (
+      'Oracle.Direct=True'
+      'Oracle.UseUnicode=True'
+      'Oracle.UnicodeEnvironment=True')
+    Username = 'dato'
+    Server = '95.104.4.220:1521:sn=myhome'
+    Connected = True
+    LoginPrompt = False
+    Left = 32
+    Top = 24
+    EncryptedPassword = 'CEFFCDFFCCFFCBFF'
+  end
+  object OracleUniProvider1: TOracleUniProvider
+    Left = 128
+    Top = 24
+  end
+  object qrShop: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 32
+  end
+  object qrKind: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 88
+  end
+  object qrProduct: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 136
+  end
+  object qrConcurent: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 184
+  end
+  object qrConcurent_Size: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 240
+  end
+  object qrGA_Size: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 304
+  end
+  object qrDiagramData: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 368
+  end
+  object spDiagram_Data: TUniStoredProc
+    StoredProcName = 'Diagram_data'
+    SQL.Strings = (
+      'begin'
+      
+        '  Diagram_data(:IN_MONTH_RERA, :IN_ID_SHOP, :IN_ID_KIND, :IN_ID_' +
+        'CONCURENT, :IN_ID_PRODUCT, :OUT_GA_MIN, :OUT_GA_MID, :OUT_GA_MAX' +
+        ', :OUT_CONC_MIN, :OUT_CONC_MID, :OUT_CONC_MAX);'
+      'end;')
+    Connection = UniConnection1
+    Left = 224
+    Top = 328
+    ParamData = <
+      item
+        DataType = ftFloat
+        Name = 'IN_MONTH_RERA'
+        ParamType = ptInput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'IN_ID_SHOP'
+        ParamType = ptInput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'IN_ID_KIND'
+        ParamType = ptInput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'IN_ID_CONCURENT'
+        ParamType = ptInput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'IN_ID_PRODUCT'
+        ParamType = ptInput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'OUT_GA_MIN'
+        ParamType = ptOutput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'OUT_GA_MID'
+        ParamType = ptOutput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'OUT_GA_MAX'
+        ParamType = ptOutput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'OUT_CONC_MIN'
+        ParamType = ptOutput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'OUT_CONC_MID'
+        ParamType = ptOutput
+        Value = nil
+      end
+      item
+        DataType = ftFloat
+        Name = 'OUT_CONC_MAX'
+        ParamType = ptOutput
+        Value = nil
+      end>
+    CommandStoredProcName = 'Diagram_data'
+  end
+end

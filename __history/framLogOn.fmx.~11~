@@ -1,0 +1,61 @@
+object frameLogOn: TframeLogOn
+  Size.Width = 370.000000000000000000
+  Size.Height = 454.000000000000000000
+  Size.PlatformDefault = False
+  object edtUser: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    Position.X = 72.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = #4315#4317#4315#4334#4315#4304#4320#4308#4305#4308#4314#4312
+  end
+  object edtPassword: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 72.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = #4318#4304#4320#4317#4314#4312
+  end
+  object Label1: TLabel
+    Position.X = 72.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4315#4317#4315#4334#4315#4304#4320#4308#4305#4314#4312#4321' '#4321#4304#4334#4308#4314#4312
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Position.X = 72.000000000000000000
+    Position.Y = 152.000000000000000000
+    Text = #4318#4304#4320#4317#4314#4312
+    TabOrder = 3
+  end
+  object btnLogon: TButton
+    Position.X = 96.000000000000000000
+    Position.Y = 224.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = #4328#4308#4321#4309#4314#4304
+    OnClick = btnLogonClick
+  end
+  object lblErrorLog: TLabel
+    StyledSettings = [Family, Size, Style]
+    Position.X = 16.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 329.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.FontColor = claRed
+    Text = #4315#4317#4315#4334#4315#4304#4320#4308#4305#4314#4312#4321' '#4321#4304#4334#4308#4314#4312' '#4304#4316' '#4318#4304#4320#4317#4314#4312' '#4304#4320#4312#4321' '#4328#4308#4330#4307#4317#4315#4312#4311
+    TabOrder = 5
+  end
+end

@@ -1,0 +1,69 @@
+unit FramDiagram;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMXTee.Engine, FMXTee.Procs, FMXTee.Chart, fDM,
+  FMXTee.Series;
+
+type
+  TFrameDiagram = class(TFrame)
+    Chart1: TChart;
+    Panel1: TPanel;
+    Series1: TBarSeries;
+    Series2: TBarSeries;
+  private
+    procedure Get_New_Line_Series(ASeries: TBarSeries);
+    procedure DrawDiagram;
+    { Private declarations }
+  public
+    MFProc: TMFProc;
+    AnaliticObject: TAnaliticObject;
+    procedure InitFrame;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+{ TFrameDiagram }
+
+procedure TFrameDiagram.InitFrame;
+begin
+
+end;
+
+procedure TFrameDiagram.DrawDiagram;
+begin
+  Series1.Clear;
+  Series2.Clear;
+
+  DM.spDiagram_Data.Prepare;
+
+  DM.qrDiagramData.ParamByName('in_month_rera').AsInteger:= AnaliticObject.Month_ID;
+  DM.qrDiagramData.ParamByName('in_id_shop').AsInteger:= AnaliticObject.Shop_ID;
+  DM.qrDiagramData.ParamByName('in_id_kind').AsInteger:= AnaliticObject.Kind_ID;
+  DM.qrDiagramData.ParamByName('in_id_concurent').AsInteger:= AnaliticObject.Concurent_ID;
+  DM.qrDiagramData.ParamByName('in_id_product').AsInteger:= AnaliticObject.Product_ID;
+  DM.qrDiagramData.Execute;
+
+   out_ga_min   out number,
+  out_ga_mid   out number,
+  out_ga_max   out number,
+  out_conc_min out number,
+  out_conc_mid out number,
+  out_conc_max out number
+
+
+    //ASeries
+
+end;
+
+procedure TFrameDiagram.Get_New_Line_Series(ASeries: TBarSeries);
+begin
+  //ASeries.AddXY()
+end;
+
+end.

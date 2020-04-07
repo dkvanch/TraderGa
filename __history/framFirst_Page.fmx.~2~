@@ -1,0 +1,12 @@
+object frameFirst_Page: TframeFirst_Page
+  Size.Width = 325.000000000000000000
+  Size.Height = 492.000000000000000000
+  Size.PlatformDefault = False
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Position.X = 120.000000000000000000
+    Position.Y = 40.000000000000000000
+  end
+end

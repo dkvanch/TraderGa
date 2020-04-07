@@ -1,0 +1,158 @@
+object FramePrice: TFramePrice
+  Size.Width = 419.000000000000000000
+  Size.Height = 526.000000000000000000
+  Size.PlatformDefault = False
+  object cbShop: TComboBox
+    HelpType = htKeyword
+    Position.X = 8.000000000000000000
+    Position.Y = 29.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object cbKind: TComboBox
+    Position.X = 8.000000000000000000
+    Position.Y = 78.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object cbProduct: TComboBox
+    Position.X = 8.000000000000000000
+    Position.Y = 126.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+  object cbConcurent: TComboBox
+    Position.X = 8.000000000000000000
+    Position.Y = 175.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+  end
+  object cbConcurentSize: TComboBox
+    Position.X = 8.000000000000000000
+    Position.Y = 230.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+  end
+  object cbGASize: TComboBox
+    Position.X = 8.000000000000000000
+    Position.Y = 341.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+  end
+  object Label1: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4315#4304#4326#4304#4310#4312#4304
+    TabOrder = 7
+  end
+  object Label2: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4321#4304#4334#4308#4317#4305#4304
+    TabOrder = 8
+  end
+  object Label3: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4318#4320#4317#4307#4323#4325#4322#4312
+    TabOrder = 9
+  end
+  object Label4: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4313#4317#4316#4313#4323#4320#4308#4316#4322#4312
+    TabOrder = 10
+  end
+  object Label5: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 208.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4313#4317#4316#4313#4323#4320#4308#4316#4322#4312#4321' '#4310#4317#4315#4304
+    TabOrder = 11
+  end
+  object Label6: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 264.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4313#4317#4316#4313#4323#4320#4308#4316#4322#4312#4321' '#4324#4304#4321#4312
+    TabOrder = 12
+  end
+  object Label7: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 320.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'GA '#4310#4317#4315#4304
+    TabOrder = 13
+  end
+  object Label8: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 376.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'GA '#4324#4304#4321#4312
+    TabOrder = 14
+  end
+  object edtConcurentPrice: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 15
+    Position.X = 8.000000000000000000
+    Position.Y = 286.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object edtGAPrice: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 16
+    Position.X = 8.000000000000000000
+    Position.Y = 400.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object btnSavePrice: TSpeedButton
+    Position.X = 32.000000000000000000
+    Position.Y = 456.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4307#4304#4324#4312#4325#4321#4312#4320#4308#4305#4304
+    OnClick = btnSavePriceClick
+  end
+  object qrShop: TUniQuery
+    Connection = DM.UniConnection1
+    Left = 352
+    Top = 16
+  end
+end

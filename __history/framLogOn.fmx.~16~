@@ -1,0 +1,67 @@
+object frameLogOn: TframeLogOn
+  Tag = 1
+  Size.Width = 370.000000000000000000
+  Size.Height = 454.000000000000000000
+  Size.PlatformDefault = False
+  object edtUser: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    Position.X = 16.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = #4315#4317#4315#4334#4315#4304#4320#4308#4305#4308#4314#4312
+  end
+  object edtPassword: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Password = True
+    Position.X = 16.000000000000000000
+    Position.Y = 192.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = #4318#4304#4320#4317#4314#4312
+  end
+  object Label1: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4315#4317#4315#4334#4315#4304#4320#4308#4305#4314#4312#4321' '#4321#4304#4334#4308#4314#4312
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Text = #4318#4304#4320#4317#4314#4312
+    TabOrder = 3
+  end
+  object btnLogon: TButton
+    Position.X = 32.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = #4328#4308#4321#4309#4314#4304
+    OnClick = btnLogonClick
+  end
+  object lblErrorLog: TLabel
+    StyledSettings = [Family, Size, Style]
+    Position.X = 16.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.FontColor = claRed
+    TextSettings.HorzAlign = Center
+    Text = #4315#4317#4315#4334#4315#4304#4320#4308#4305#4314#4312#4321' '#4321#4304#4334#4308#4314#4312' '#4304#4316' '#4318#4304#4320#4317#4314#4312' '#4304#4320#4312#4321' '#4328#4308#4330#4307#4317#4315#4312#4311
+    TabOrder = 5
+  end
+end

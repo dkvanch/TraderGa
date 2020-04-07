@@ -1,0 +1,118 @@
+unit FramAnalitics;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.ListBox, fDM, Data.DB, MemDS, DBAccess, Uni;
+
+type
+  TFrameAnalitics = class(TFrame)
+    cbMonth: TComboBox;
+    cbShop: TComboBox;
+    cbKind: TComboBox;
+    cbProduct: TComboBox;
+    cbConcurent: TComboBox;
+    lblMonth: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    btnShowData: TSpeedButton;
+    procedure btnShowDataClick(Sender: TObject);
+  private
+    procedure Fill_Combos(ACombo: TComboBox; AQuery: TUniQuery);
+    procedure OpenAllQueries;
+    procedure OpenDiagramDataset;
+    { Private declarations }
+  public
+    MFProc: TMFProc;
+    procedure InitFrame;
+  end;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrameAnalitics.btnShowDataClick(Sender: TObject);
+begin
+  OpenDiagramDataset;
+  MFProc(c_Go_Diagram, '');
+end;
+
+procedure TFrameAnalitics.OpenDiagramDataset;
+var
+  vMonth, vShop, vKind, vProduct, vConcurent: TListBoxItem;
+begin
+  vMonth:= cbMonth.ListItems[cbMonth.ItemIndex];
+  vShop:= cbShop.ListItems[cbShop.ItemIndex];
+  vKind:= cbKind.ListItems[cbKind.ItemIndex];
+  vProduct:= cbProduct.ListItems[cbProduct.ItemIndex];
+  vConcurent:= cbConcurent.ListItems[cbConcurent.ItemIndex];
+end;
+
+procedure TFrameAnalitics.InitFrame;
+var
+  I: Integer;
+  Item: TListBoxItem;
+begin
+  OpenAllQueries;
+
+  Fill_Combos(cbShop, DM.qrShop);
+  Fill_Combos(cbKind, DM.qrKind);
+  Fill_Combos(cbProduct, DM.qrProduct);
+  Fill_Combos(cbConcurent, DM.qrConcurent);
+
+  cbMonth.ListBox.BeginUpdate;
+  for I:= 1 to 12 do
+  begin
+    Item:= TListBoxItem.Create(cbMonth);
+    Item.Height:= 40;
+
+    Item.ItemData.Text:= c_Month[I];
+    Item.Tag:= I;
+    cbMonth.AddObject(Item);
+  end;
+  cbMonth.ListBox.EndUpdate;
+end;
+
+procedure TFrameAnalitics.OpenAllQueries;
+var
+  I: Integer;
+  vQ: TUniQuery;
+begin
+  for I:= 0 to self.ComponentCount - 1 do
+    if self.Components[I] is TUniQuery then
+    begin
+      vQ:= TUniQuery(self.Components[I]);
+      if not vQ.Active then
+        vQ.Open;
+    end;
+end;
+
+procedure TFrameAnalitics.Fill_Combos(ACombo: TComboBox; AQuery: TUniQuery);
+var
+  Item: TListBoxItem;
+begin
+  ACombo.Clear;
+  AQuery.First;
+
+  ACombo.ListBox.BeginUpdate;
+  while not AQuery.eof do
+  begin
+    Item:= TListBoxItem.Create(ACombo);
+    Item.Height:= 40;
+
+    Item.ItemData.Text:= AQuery.FieldByName('Item_Name').AsString;
+    Item.Tag:= AQuery.FieldByName('ID_Item').AsInteger;
+    ACombo.AddObject(Item);
+
+    AQuery.Next;
+  end;
+  AQuery.First;
+  ACombo.ItemIndex:= 0;
+  ACombo.ListBox.EndUpdate;
+end;
+
+end.

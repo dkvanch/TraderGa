@@ -1,0 +1,58 @@
+object FrameDiagram: TFrameDiagram
+  Size.Width = 344.000000000000000000
+  Size.Height = 558.000000000000000000
+  Size.PlatformDefault = False
+  object Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'TChart')
+    Title.Visible = False
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Client
+    TabOrder = 0
+    Size.Width = 344.000000000000000000
+    Size.Height = 518.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+    object Series1: TBarSeries
+      Legend.Text = 'GA'
+      Legend.Visible = False
+      LegendTitle = 'GA'
+      ColorEachPoint = True
+      ShowInLegend = False
+      Title = 'Series1'
+      BarRound = brNone
+      BarStyle = bsBevel
+      XValues.Name = 'X'
+      XValues.Order = loNone
+      YValues.Name = 'Bar'
+      YValues.Order = loNone
+      Data = {00030000000000000000593C402FDD240601374040F853E3A59BC23A40}
+    end
+    object Series2: TBarSeries
+      Legend.Text = #4313#4317#4316#4313#4323#4320#4308#4316#4322#4312
+      Legend.Visible = False
+      LegendTitle = #4313#4317#4316#4313#4323#4320#4308#4316#4322#4312
+      BarBrush.Gradient.EndColor = xFFF14C14
+      ColorEachPoint = True
+      ShowInLegend = False
+      BarStyle = bsBevel
+      Gradient.EndColor = xFFF14C14
+      XValues.Name = 'X'
+      XValues.Order = loNone
+      YValues.Name = 'Bar'
+      YValues.Order = loNone
+      Data = {00030000009A99999999AD56409A99999999494B406766666666E25140}
+    end
+  end
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 344.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+end

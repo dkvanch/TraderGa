@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.937,C:\Projects\Trader GA\Unit1.fmx=C:\Projects\Trader GA\framFirst_Page.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.372,C:\Projects\Trader GA\Unit1.fmx=C:\Projects\Trader GA\framLogOn.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.134,C:\Users\David Kvanchakhadze\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Projects\Trader GA\fMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.873,C:\Projects\Trader GA\fDM.pas=C:\Projects\Trader GA\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.715,C:\Projects\Trader GA\FramAnalitics.fmx=C:\Projects\Trader GA\Unit1.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.984,C:\Projects\Trader GA\Unit1.fmx=C:\Projects\Trader GA\FramPrice.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.715,C:\Projects\Trader GA\FramAnalitics.pas=C:\Projects\Trader GA\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.381,C:\Users\David Kvanchakhadze\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Projects\Trader GA\TraderGA.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.116,C:\Projects\Trader GA\FramDiagram.pas=C:\Projects\Trader GA\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.723,=C:\Users\David Kvanchakhadze\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.839,=C:\Users\David Kvanchakhadze\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.873,C:\Projects\Trader GA\fDM.dfm=C:\Projects\Trader GA\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.651,=C:\Projects\Trader GA\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.937,C:\Projects\Trader GA\Unit1.pas=C:\Projects\Trader GA\framFirst_Page.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.900,=C:\Projects\Trader GA\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.116,C:\Projects\Trader GA\FramDiagram.fmx=C:\Projects\Trader GA\Unit1.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.984,C:\Projects\Trader GA\Unit1.pas=C:\Projects\Trader GA\FramPrice.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.372,C:\Projects\Trader GA\Unit1.pas=C:\Projects\Trader GA\framLogOn.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.709,=C:\Projects\Trader GA\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.034,=C:\Projects\Trader GA\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.134,C:\Users\David Kvanchakhadze\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Projects\Trader GA\fMain.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.171,=C:\Projects\Trader GA\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.354,=C:\Projects\Trader GA\Unit1.pas</Transaction>
+    <Transaction>2020.04.07 20:20:31.714,=C:\Projects\Common\firemonkey-network-state-master\Source\UNetworkState.pas</Transaction>
+    <Transaction>2020.04.07 22:01:09.150,=C:\Projects\Trader GA\UNetworkState.Android.pas</Transaction>
+    <Transaction>2020.04.07 22:01:09.162,=C:\Projects\Trader GA\UNetworkState.iOS.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="AVD_for_Nexus_6_by_Google"/>
+	</ActiveMobileDevice>
+	<BT_BuildType>Debug</BT_BuildType>
+</BorlandProject>

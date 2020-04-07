@@ -1,0 +1,139 @@
+inherited frmMain_iPhone47in: TfrmMain_iPhone47in
+  ClientHeight = 647
+  ClientWidth = 375
+  DesignerMasterStyle = 0
+  inherited TabControl1: TTabControl
+    Size.Width = 375.000000000000000000
+    Size.Height = 603.000000000000000000
+    TabHeight = 49.000000000000000000
+    Sizes = (
+      375s
+      554s
+      375s
+      554s
+      375s
+      554s
+      375s
+      554s
+      375s
+      554s
+      375s
+      554s)
+    inherited tbLogOn: TTabItem
+      Size.Width = 62.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited frameLogOn1: TframeLogOn
+        Size.Width = 375.000000000000000000
+        Size.Height = 554.000000000000000000
+        inherited edtUser: TEdit
+          Anchors = [akLeft, akTop, akRight]
+          Size.Height = 30.000000000000000000
+        end
+        inherited edtPassword: TEdit
+          Anchors = [akLeft, akTop, akRight]
+          Size.Height = 30.000000000000000000
+        end
+      end
+    end
+    inherited tblFirst_Page: TTabItem
+      Size.Width = 62.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited frameFirst_Page1: TframeFirst_Page
+        Size.Width = 375.000000000000000000
+        Size.Height = 554.000000000000000000
+        inherited Image1: TImage
+          MultiResBitmap.Height = 137
+          MultiResBitmap.Width = 128
+        end
+        inherited btnGoPrice: TSpeedButton
+          Size.Width = 230.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+        inherited btnGoAnalitics: TSpeedButton
+          Size.Width = 230.000000000000000000
+          Size.Height = 44.000000000000000000
+        end
+      end
+    end
+    inherited tblPrice: TTabItem
+      Size.Width = 62.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 60.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited FramePrice1: TFramePrice
+        Size.Width = 375.000000000000000000
+        Size.Height = 554.000000000000000000
+        inherited Label1: TLabel [0]
+        end
+        inherited Label2: TLabel [1]
+        end
+        inherited Label3: TLabel [2]
+        end
+        inherited Label4: TLabel [3]
+        end
+        inherited Label5: TLabel [4]
+        end
+        inherited Label6: TLabel [5]
+        end
+        inherited Label7: TLabel [6]
+        end
+        inherited Label8: TLabel [7]
+        end
+        inherited btnSavePrice: TSpeedButton [8]
+          Size.Height = 44.000000000000000000
+        end
+        inherited cbShop: TComboBox [9]
+          Size.Height = 30.000000000000000000
+        end
+        inherited cbKind: TComboBox [10]
+          Size.Height = 30.000000000000000000
+        end
+        inherited cbProduct: TComboBox [11]
+          Size.Height = 30.000000000000000000
+        end
+        inherited cbConcurent: TComboBox [12]
+          Size.Height = 30.000000000000000000
+        end
+        inherited cbConcurentSize: TComboBox [13]
+          Size.Height = 30.000000000000000000
+        end
+        inherited edtConcurentPrice: TEdit
+          Size.Height = 30.000000000000000000
+        end
+        inherited cbGASize: TComboBox [15]
+          Size.Height = 30.000000000000000000
+        end
+        inherited edtGAPrice: TEdit [16]
+          Size.Height = 30.000000000000000000
+        end
+      end
+    end
+    inherited tblAnalitics: TTabItem
+      Size.Width = 62.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 79.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+    inherited TabItem3: TTabItem
+      Size.Width = 62.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+    inherited TabItem4: TTabItem
+      Size.Width = 65.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+  end
+  inherited ToolBar1: TToolBar
+    Position.Y = 603.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 44.000000000000000000
+  end
+end

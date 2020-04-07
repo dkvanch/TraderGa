@@ -1,0 +1,57 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 500
+  Width = 548
+  object UniConnection1: TUniConnection
+    ProviderName = 'Oracle'
+    SpecificOptions.Strings = (
+      'Oracle.Direct=True'
+      'Oracle.UseUnicode=True'
+      'Oracle.UnicodeEnvironment=True')
+    Username = 'dato'
+    Server = '95.104.4.220:1521:sn=myhome'
+    LoginPrompt = False
+    Left = 32
+    Top = 24
+    EncryptedPassword = 'CEFFCDFFCCFFCBFF'
+  end
+  object OracleUniProvider1: TOracleUniProvider
+    Left = 128
+    Top = 24
+  end
+  object qrShop: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 32
+  end
+  object qrKind: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 88
+  end
+  object qrProduct: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 136
+  end
+  object qrConcurent: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 184
+  end
+  object qrConcurent_Size: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 240
+  end
+  object qrGA_Size: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 352
+  end
+  object qrDiagramData: TUniQuery
+    Connection = UniConnection1
+    Left = 424
+    Top = 424
+  end
+end

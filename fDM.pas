@@ -1,0 +1,55 @@
+﻿unit fDM;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, UniProvider, OracleUniProvider, Data.DB,
+  DBAccess, Uni, MemDS;
+
+const
+  c_Login = 1;
+  c_Go_First_Page = 2;
+  c_Go_Price = 3;
+  c_Go_Analitics = 4;
+  c_Go_Diagram = 5;
+
+  c_Month: array[1..12] of string = ('იანვარი','თებერვალი','მარტი','აპრილი','მაისი','ივნისი','ივლისი','აგვისტო','სექტემბერი','ოქტომბერი','ნოემბერი','დეკემბერი');
+type
+  TMFProc = procedure(Tab_ID: Integer; AMessage: String; AObject: TObject) of object;
+
+  TAnaliticObject = class
+  public
+    Month_ID: Integer;
+    Shop_ID: Integer;
+    Kind_ID: Integer;
+    Product_ID: Integer;
+    Concurent_ID: Integer;
+  end;
+
+  TDM = class(TDataModule)
+    UniConnection1: TUniConnection;
+    OracleUniProvider1: TOracleUniProvider;
+    qrShop: TUniQuery;
+    qrKind: TUniQuery;
+    qrProduct: TUniQuery;
+    qrConcurent: TUniQuery;
+    qrConcurent_Size: TUniQuery;
+    qrGA_Size: TUniQuery;
+    qrDiagramData: TUniQuery;
+    spDiagram_Data: TUniStoredProc;
+  private
+    { Private declarations }
+  public
+
+  end;
+
+var
+  DM: TDM;
+
+implementation
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

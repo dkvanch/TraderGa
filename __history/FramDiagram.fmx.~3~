@@ -1,0 +1,40 @@
+object FrameDiagram: TFrameDiagram
+  Size.Width = 344.000000000000000000
+  Size.Height = 558.000000000000000000
+  Size.PlatformDefault = False
+  object Chart1: TChart
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'TChart')
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Client
+    TabOrder = 0
+    Size.Width = 344.000000000000000000
+    Size.Height = 518.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+    object Series1: TBarSeries
+      Legend.Visible = False
+      ColorEachPoint = True
+      ShowInLegend = False
+      XValues.Name = 'X'
+      XValues.Order = loNone
+      YValues.Name = 'Bar'
+      YValues.Order = loNone
+      Data = {
+        00060000000000000000405A4000000000004065400000000000D06640000000
+        000070674000000000000069400000000000707240}
+    end
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 518.000000000000000000
+    Size.Width = 344.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+end

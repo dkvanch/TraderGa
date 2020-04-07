@@ -1,0 +1,106 @@
+inherited frmMain_NmXhdpiPh: TfrmMain_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited TabControl1: TTabControl
+    Size.Width = 400.000000000000000000
+    Size.Height = 567.000000000000000000
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    Sizes = (
+      400s
+      518s
+      400s
+      518s
+      400s
+      518s
+      400s
+      518s
+      400s
+      518s
+      400s
+      518s)
+    inherited tbLogOn: TTabItem
+      Size.Width = 66.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited frameLogOn1: TframeLogOn
+        Size.Width = 400.000000000000000000
+        Size.Height = 518.000000000000000000
+        inherited edtUser: TEdit
+          Anchors = [akLeft, akTop, akRight]
+          Size.Height = 32.000000000000000000
+        end
+        inherited edtPassword: TEdit
+          Anchors = [akLeft, akTop, akRight]
+          Size.Height = 32.000000000000000000
+        end
+      end
+    end
+    inherited tblFirst_Page: TTabItem
+      IsSelected = True
+      Size.Width = 66.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited frameFirst_Page1: TframeFirst_Page
+        Size.Width = 400.000000000000000000
+        Size.Height = 518.000000000000000000
+        inherited Image1: TImage
+          MultiResBitmap.Height = 137
+          MultiResBitmap.Width = 128
+        end
+        inherited btnGoPrice: TSpeedButton
+          Size.Width = 255.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+        inherited btnGoAnalitics: TSpeedButton
+          Size.Width = 255.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+      end
+    end
+    inherited tblPrice: TTabItem
+      Size.Width = 66.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 60.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited FramePrice1: TFramePrice
+        Size.Width = 400.000000000000000000
+        Size.Height = 518.000000000000000000
+        inherited btnSavePrice: TSpeedButton
+          Size.Height = 48.000000000000000000
+        end
+      end
+    end
+    inherited tblAnalitics: TTabItem
+      IsSelected = False
+      Size.Width = 66.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 79.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      inherited FrameAnalitics1: TFrameAnalitics
+        Size.Width = 400.000000000000000000
+        Size.Height = 518.000000000000000000
+      end
+    end
+    inherited TabItem3: TTabItem
+      Size.Width = 66.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+    inherited TabItem4: TTabItem
+      Size.Width = 70.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+  end
+  inherited ToolBar1: TToolBar
+    Position.Y = 567.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 48.000000000000000000
+  end
+end
